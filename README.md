@@ -1,5 +1,10 @@
 # ggg_clean_arch
 
+## 起動方法
+```
+go run ./cmd/api
+```
+
 ## アーキテクチャ
 
 ### UI
