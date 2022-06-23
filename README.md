@@ -27,3 +27,7 @@ go run ./cmd/api
 - DBへのアクセスを行う
 - 外部HTTP API を実行する
 - UI、Usecaseの仕様を知らなくても実行ができる
+
+参考
+- https://github.com/evrone/go-clean-template
+- https://github.com/bmf-san/go-clean-architecture-web-application-boilerplate
