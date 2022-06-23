@@ -1,0 +1,51 @@
+.
+├── README.md
+├── cmd
+│   └── api
+│       └── main.go
+├── db
+│   └── mysql
+│       ├── ddl
+│       │   └── schema.sql
+│       └── dml
+│           └── seed.sql
+├── docker
+│   └── api
+├── go.mod
+├── go.sum
+├── internal
+│   ├── config
+│   │   ├── config.go
+│   │   └── mysql.go
+│   ├── domain
+│   │   ├── model
+│   │   │   └── user.go
+│   │   └── repository
+│   │       └── repository.go
+│   ├── http
+│   │   ├── handler
+│   │   │   ├── handler.go
+│   │   │   ├── health.go
+│   │   │   └── user.go
+│   │   ├── middleware
+│   │   └── router
+│   │       ├── router.go
+│   │       └── user.go
+│   ├── infra
+│   │   └── mysql
+│   │       ├── client.go
+│   │       └── user.go
+│   ├── usecase
+│   │   ├── usecase.go
+│   │   └── user.go
+│   └── util
+│       └── logger
+│           ├── appendix.go
+│           ├── appendix_test.go
+│           ├── logger.go
+│           ├── logger_test.go
+│           ├── option.go
+│           └── option_test.go
+└── staticcheck.conf
+
+22 directories, 26 files
