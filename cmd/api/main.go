@@ -15,15 +15,18 @@ import (
 	"github.com/go-chi/cors"
 	_ "github.com/go-sql-driver/mysql" // New import
 	"github.com/y-o-anicca/ggg_clean_arch/internal/config"
-	"github.com/y-o-anicca/ggg_clean_arch/internal/http/handler"
-	httpRouter "github.com/y-o-anicca/ggg_clean_arch/internal/http/router"
 	"github.com/y-o-anicca/ggg_clean_arch/internal/infra/mysql"
+	"github.com/y-o-anicca/ggg_clean_arch/internal/ui/http/handler"
+	httpRouter "github.com/y-o-anicca/ggg_clean_arch/internal/ui/http/router"
 	"github.com/y-o-anicca/ggg_clean_arch/internal/usecase"
 
 	"github.com/y-o-anicca/ggg_clean_arch/internal/util/logger"
 )
 
 func main() {
+
+	// 以下の環境変数はローカル環境に合わせて変更して下さい。
+	// Dockerコンテナ上で実行する場合は以下の環境変数設定処理は不要です
 	os.Setenv("APP_ENV", "development")
 	os.Setenv("HOST", "localhost")
 	os.Setenv("PORT", "4000")
@@ -107,7 +110,6 @@ func openDB() (*sql.DB, error) {
 }
 
 func initHandler(db *sql.DB, log *logger.Logger) *chi.Mux {
-
 	repository := mysql.NewClient(log, db)
 	usecase := usecase.NewUseCase(log, repository)
 	h := handler.NewHandler(usecase, log)

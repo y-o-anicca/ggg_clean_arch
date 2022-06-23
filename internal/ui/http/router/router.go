@@ -2,7 +2,7 @@ package router
 
 import (
 	"github.com/go-chi/chi"
-	"github.com/y-o-anicca/ggg_clean_arch/internal/http/handler"
+	"github.com/y-o-anicca/ggg_clean_arch/internal/ui/http/handler"
 	"github.com/y-o-anicca/ggg_clean_arch/internal/util/logger"
 )
 
